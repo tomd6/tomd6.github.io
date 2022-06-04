@@ -1,0 +1,7 @@
+{{ define "main"}}
+    <div class="columns is-multiline">
+        {{ range .Paginator.Pages }}
+            <div class="column is-one-third">{{- partial "card.html" . -}}</div>
+        {{ end }}
+    </div>
+{{ end }}

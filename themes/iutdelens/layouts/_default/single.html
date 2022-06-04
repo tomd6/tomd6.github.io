@@ -1,0 +1,20 @@
+{{ define "main" }} 
+<section class="section"> 
+  <article> 
+    <div class="columns is-centered"> 
+        <div class="column max-800px"> 
+          <h1 class="title is-1">{{ .Title }}</h1> 
+          <div class="content"> 
+            {{ .Content }} 
+            {{ .Site.Params.Author }}
+            {{ with .Site.Params.authorImage }}
+            <div>
+            <img src="{{ . }}" weight="100px" height="91px"/>
+            </div>
+            {{ end }}
+          </div> 
+        </div> 
+      </div>     
+    </article>
+  </section> 
+  {{ end }}
